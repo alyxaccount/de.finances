@@ -1,0 +1,280 @@
+:root {
+    --dark-blue: #1E90FF;
+
+}
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+} 
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding:0;
+    margin:-1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* titles ===*/
+
+h2 {
+    margin-top: 3,2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+/* Links e bottons ===*/
+
+a {
+    color: #49AA26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: rgb(48, 207, 74);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background:rgb(0, 255, 0);
+
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
+.button.cancel {
+    color: red;
+    border: 2px red solid;
+    border-radius: 0.25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+header {
+    background: linear-gradient(to left, #536976, #292e49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 5rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: #fff;
+    font-weight: 100;
+}
+
+#balance {
+    margin-top: -5.5rem;
+}
+
+#balance h2 {
+    columns: white;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 0.50rem;
+    margin-bottom: 0.80rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.card.total {
+  background: linear-gradient(to right, #aaffa9, #11ffbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: rgb(0, 0, 0);
+}
+
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing:0 0.1rem;
+    color: #969cb3;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table th {
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    color: #969cb3;
+    text-align: left;
+
+}
+
+table td {
+    background-color: white;
+    font-weight: normal;
+    padding: 0.5rem 0.5rem;
+    color: #969cb3;
+    text-align: left;
+
+}
+
+td.description {
+    color: var(--dark-blue); 
+}
+
+td.income {
+    color: #5dd426;
+}
+
+td.expense {
+    color: red;
+}
+
+/* Modal === */ 
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    
+}
+
+/* Modal === */ 
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: linear-gradient(to bottom, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 2.4rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Form === */
+
+#form {
+    max-width: 500px;   
+}
+
+#form h2 {
+    margin-top: 0.8rem;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width:  100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+/* Footer === */
+
+footer {
+    text-align: center;
+    padding: 5rem 0 2rem;
+    color: var(--dark-blue);
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (min-width: 800px) {
+    html {
+        font-size: 87,5%;
+
+    }
+    
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 2rem;
+    }
+    
+}
